@@ -83,3 +83,23 @@ function refreshUI(){
 
 refreshUI();
 
+function removeFunds(amount){
+  const data = JSON.parse(localStorage.getItem("bankData"));
+
+  if(data.balance < amount){
+    alert("Insufficient Balance");
+    return;
+  }
+
+  data.balance -= amount;
+
+  data.transactions.push({
+    type: "DEBIT",
+    amount: amount,
+    time: new Date().toLocaleString(),
+    note: "Funds Withdrawn"
+  });
+
+  localStorage.setItem("bankData", JSON.stringify(data));
+  refreshUI();
+}
