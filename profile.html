@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Profile</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/profile.js"></script>
+</head>
+<body>
+
+<header class="top-bar">
+  <h1>Securo Bank</h1>
+</header>
+
+<div class="container">
+
+  <aside class="sidebar">
+    <ul>
+      <li onclick="location.href='dashboard.html'">Account Balance</li>
+      <li onclick="location.href='transfer.html'">Funds Transfer</li>
+      <li onclick="location.href='transactions.html'">Transactions</li>
+      <li onclick="location.href='loans.html'">Loans</li>
+      <li onclick="location.href='ipo.html'">IPO</li>
+      <li class="active">My Profile</li>
+      <li onclick="logout()">Logout</li>
+    </ul>
+  </aside>
+
+  <main class="main-content">
+    <h2>My Profile</h2>
+
+    <!-- Account Details -->
+    <div class="card profile-card">
+      <h3>Account Details</h3>
+      <p><strong>Name:</strong> <span id="userName">Mahek Joshi</span></p>
+      <p><strong>Account Number:</strong> 458796321245</p>
+      <p><strong>IFSC Code:</strong> SECUR0001</p>
+      <p><strong>Email:</strong> mahek@email.com</p>
+      <p><strong>KYC Status:</strong> 
+        <span id="kycStatus" class="kyc-badge">Pending</span>
+      </p>
+    </div>
+
+    <!-- Options Section -->
+    <div class="profile-options">
+
+      <!-- Manage Profile -->
+      <div class="card option-card">
+        <h3>Manage My Profile</h3>
+        <input type="text" id="editName" placeholder="Edit Name">
+        <button onclick="updateName()">Update Name</button>
+        <button onclick="updateKYC()">Mark KYC as Completed</button>
+      </div>
+
+      <!-- Get Support -->
+      <div class="card option-card">
+        <h3>Get Support</h3>
+        <p>Email: support@securobank.com</p>
+        <p>Customer Care: 1800-123-4567</p>
+        <button onclick="contactSupport()">Contact Support</button>
+      </div>
+
+      <!-- Refer & Earn -->
+      <div class="card option-card">
+        <h3>Refer & Earn Rewards</h3>
+        <p>Your Referral Code:</p>
+        <h4 id="refCode">SEC12345</h4>
+        <button onclick="copyReferral()">Copy Code</button>
+      </div>
+
+      <!-- Feedback -->
+      <div class="card option-card">
+        <h3>Share Feedback</h3>
+        <textarea id="feedbackText" placeholder="Write your feedback here..."></textarea>
+        <button onclick="submitFeedback()">Submit Feedback</button>
+      </div>
+
+    </div>
+
+    <p id="profileMessage" class="success-msg"></p>
+
+  </main>
+
+</div>
+
+</body>
+</html>

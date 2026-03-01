@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IPO Section</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/ipo.js"></script>
+</head>
+<body>
+
+<header class="top-bar">
+  <h1>Securo Bank</h1>
+</header>
+
+<div class="container">
+
+  <aside class="sidebar">
+    <ul>
+      <li onclick="location.href='dashboard.html'">Account Balance</li>
+      <li onclick="location.href='transfer.html'">Funds Transfer</li>
+      <li onclick="location.href='transactions.html'">Transactions</li>
+      <li onclick="location.href='loans.html'">Loans</li>
+      <li class="active">IPO</li>
+      <li onclick="location.href='profile.html'">My Profile</li>
+      <li onclick="logout()">Logout</li>
+    </ul>
+  </aside>
+
+  <main class="main-content">
+    <h2>Live IPO Listings</h2>
+
+    <div class="ipo-grid">
+
+      <!-- IPO CARD 1 -->
+      <div class="ipo-card">
+        <h3>Tata Technologies Ltd.</h3>
+        <p><strong>Issue Size:</strong> ₹3,042 Cr</p>
+        <p><strong>Price Band:</strong> ₹475 – ₹500</p>
+        <p><strong>Lot Size:</strong> 30 Shares</p>
+        <p><strong>Closing Date:</strong> 22 Nov 2023</p>
+        <button onclick="applyIPO('Tata Technologies Ltd.')">
+          Apply Now
+        </button>
+      </div>
+
+      <!-- IPO CARD 2 -->
+      <div class="ipo-card">
+        <h3>IREDA</h3>
+        <p><strong>Issue Size:</strong> ₹2,150 Cr</p>
+        <p><strong>Price Band:</strong> ₹30 – ₹32</p>
+        <p><strong>Lot Size:</strong> 460 Shares</p>
+        <p><strong>Closing Date:</strong> 23 Nov 2023</p>
+        <button onclick="applyIPO('IREDA')">
+          Apply Now
+        </button>
+      </div>
+
+      <!-- IPO CARD 3 -->
+      <div class="ipo-card">
+        <h3>DOMS Industries</h3>
+        <p><strong>Issue Size:</strong> ₹1,200 Cr</p>
+        <p><strong>Price Band:</strong> ₹750 – ₹790</p>
+        <p><strong>Lot Size:</strong> 18 Shares</p>
+        <p><strong>Closing Date:</strong> 15 Dec 2023</p>
+        <button onclick="applyIPO('DOMS Industries')">
+          Apply Now
+        </button>
+      </div>
+
+      <!-- IPO CARD 4 -->
+      <div class="ipo-card">
+        <h3>JSW Infrastructure</h3>
+        <p><strong>Issue Size:</strong> ₹2,800 Cr</p>
+        <p><strong>Price Band:</strong> ₹113 – ₹119</p>
+        <p><strong>Lot Size:</strong> 126 Shares</p>
+        <p><strong>Closing Date:</strong> 27 Sept 2023</p>
+        <button onclick="applyIPO('JSW Infrastructure')">
+          Apply Now
+        </button>
+      </div>
+
+      <!-- IPO CARD 5 -->
+      <div class="ipo-card">
+        <h3>Paytm (One97 Communications)</h3>
+        <p><strong>Issue Size:</strong> ₹18,300 Cr</p>
+        <p><strong>Price Band:</strong> ₹2,080 – ₹2,150</p>
+        <p><strong>Lot Size:</strong> 6 Shares</p>
+        <p><strong>Closing Date:</strong> 10 Nov 2021</p>
+        <button onclick="applyIPO('Paytm')">
+          Apply Now
+        </button>
+      </div>
+
+      <!-- IPO CARD 6 -->
+      <div class="ipo-card">
+        <h3>Zomato Ltd.</h3>
+        <p><strong>Issue Size:</strong> ₹9,375 Cr</p>
+        <p><strong>Price Band:</strong> ₹72 – ₹76</p>
+        <p><strong>Lot Size:</strong> 195 Shares</p>
+        <p><strong>Closing Date:</strong> 16 July 2021</p>
+        <button onclick="applyIPO('Zomato Ltd.')">
+          Apply Now
+        </button>
+      </div>
+
+    </div>
+
+    <p id="ipoMessage" class="success-msg"></p>
+
+  </main>
+
+</div>
+
+</body>
+</html>

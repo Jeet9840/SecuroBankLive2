@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard | Securo Bank</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="top-bar">
+  <h1>Securo Bank</h1>
+</header>
+
+<div class="container">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <ul>
+      <li class="active">Account Balance</li>
+      <li onclick="location.href='transfer.html'">Funds Transfer</li>
+      <li onclick="location.href='transactions.html'">Transactions</li>
+      <li onclick="location.href='loans.html'">Loans</li>
+      <li onclick="location.href='ipo.html'">IPO</li>
+      <li onclick="location.href='profile.html'">My Profile</li>
+      <li onclick="logout()">Logout</li>
+    </ul>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content center-dashboard">
+
+    <!-- TOP STATS -->
+    <div class="stats-row">
+
+      <div class="card stat-card">
+        <h4>Account Balance</h4>
+        <p class="stat-value">₹5,250.00</p>
+      </div>
+
+      <div class="card stat-card">
+        <h4>Available Balance</h4>
+        <p class="stat-value">₹4,980.00</p>
+      </div>
+
+      <div class="card stat-card">
+        <h4>Last Login</h4>
+        <p class="stat-small">17 Feb 2026, 10:42 AM</p>
+      </div>
+
+    </div>
+
+    <!-- RECENT TRANSACTIONS -->
+    <div class="card full-width">
+      <h3>Recent Transactions</h3>
+
+      <table class="txn-table">
+        <tr>
+          <td class="debit">- ₹120.00</td>
+          <td>Debit Card</td>
+          <td>16 Feb 2026</td>
+        </tr>
+        <tr>
+          <td class="credit">+ ₹2,000.00</td>
+          <td>Salary</td>
+          <td>15 Feb 2026</td>
+        </tr>
+        <tr>
+          <td class="debit">- ₹60.00</td>
+          <td>Utility Bill</td>
+          <td>14 Feb 2026</td>
+        </tr>
+      </table>
+
+      <a class="view-link" href="transactions.html">View Full Statement</a>
+    </div>
+
+    <!-- BOTTOM ROW -->
+    <div class="bottom-row">
+
+      <div class="card">
+        <h3>Quick Actions</h3>
+        <button class="action-btn" onclick="location.href='transfer.html'">Transfer Funds</button>
+        <button class="action-btn secondary">Apply for Loan</button>
+        <button class="action-btn secondary">Invest in IPO</button>
+      </div>
+
+      <div class="card">
+        <h3>Account Details</h3>
+        <p><strong>Account No:</strong> XXXX XXXX 4821</p>
+        <p><strong>Account Type:</strong> Savings</p>
+        <p><strong>Branch:</strong> Ahmedabad Main</p>
+        <p><strong>IFSC:</strong> SECU0001245</p>
+      </div>
+
+    </div>
+
+  </main>
+
+</div>
+
+<script>
+function logout() {
+  alert("Logged out successfully");
+  window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>

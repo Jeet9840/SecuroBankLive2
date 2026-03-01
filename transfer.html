@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Funds Transfer</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/transfer.js"></script>
+</head>
+<body>
+
+<header class="top-bar">
+  <h1>Securo Bank</h1>
+</header>
+
+<div class="container">
+
+  <aside class="sidebar">
+    <ul>
+      <li onclick="location.href='dashboard.html'">Account Balance</li>
+      <li class="active">Funds Transfer</li>
+      <li onclick="location.href='transactions.html'">Transactions</li>
+      <li onclick="location.href='loans.html'">Loans</li>
+      <li onclick="location.href='ipo.html'">IPO</li>
+      <li onclick="location.href='profile.html'">My Profile</li>
+      <li onclick="logout()">Logout</li>
+    </ul>
+  </aside>
+
+  <main class="main-content">
+    <div class="card transfer-card">
+      <h2>Transfer Money</h2>
+
+      <div class="balance-box">
+        Available Balance: ₹ <span id="currentBalance">0</span>
+      </div>
+
+      <form id="transferForm">
+
+        <input type="text" id="beneficiaryName" 
+          placeholder="Beneficiary Name" required>
+
+        <input type="text" id="accountNumber" 
+          placeholder="Beneficiary Account Number" required>
+
+        <input type="text" id="ifsc" 
+          placeholder="IFSC Code" required>
+
+        <input type="number" id="amount" 
+          placeholder="Enter Amount" required>
+
+        <textarea id="remarks" 
+          placeholder="Remarks (optional)"></textarea>
+
+        <button type="submit">Transfer Now</button>
+
+      </form>
+
+      <p id="transferMessage" class="success-msg"></p>
+
+    </div>
+  </main>
+
+</div>
+
+</body>
+</html>
