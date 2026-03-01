@@ -44,6 +44,13 @@
         </button>
       </div>
 
+      <div class="withdraw-box">
+        <input type="number" id="removeAmount" placeholder="Enter amount to withdraw">
+        <button onclick="removeFunds(Number(document.getElementById('removeAmount').value))">
+    Withdraw
+        </button>
+      </div>
+
       <div class="card stat-card">
         <h4>Available Balance</h4>
         <p class="stat-value">₹4,980.00</p>
@@ -114,6 +121,7 @@ function logout() {
 
 </body>
 </html>
+
 
 
 
