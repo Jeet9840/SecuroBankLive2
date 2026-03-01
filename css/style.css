@@ -449,6 +449,56 @@ body {
   color: red;
   font-weight: bold;
 }
+/* ===== DEPOSIT SYSTEM (BLENDED STYLE) ===== */
+
+.deposit-box{
+  margin-top: 15px;
+  padding: 12px;
+  background: #f4f8fd;                 /* soft blue-white */
+  border: 1px solid #e1e8f2;
+  border-radius: 6px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.deposit-box input{
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccd6e3;
+  border-radius: 4px;
+  font-size: 14px;
+  background: #ffffff;
+  color: #333;
+}
+
+.deposit-box input::placeholder{
+  color: #888;
+}
+
+.deposit-box input:focus{
+  outline: none;
+  border-color: #1e4f91;
+  box-shadow: 0 0 0 2px rgba(30,79,145,0.15);
+}
+
+.deposit-box button{
+  padding: 10px 16px;
+  background: #1e4f91;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  transition: 0.2s ease;
+  white-space: nowrap;
+}
+
+.deposit-box button:hover{
+  background: #163a6f;
+}
+
 
 
 
