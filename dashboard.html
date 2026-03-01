@@ -36,6 +36,13 @@
         <h4>Account Balance</h4>
         <p class="stat-value" id=balance>₹0</p>
       </div>
+      
+      <div class="deposit-box">
+        <input type="number" id="addAmount" placeholder="Enter amount to deposit">
+        <button onclick="addFunds(Number(document.getElementById('addAmount').value))">
+    Deposit
+        </button>
+      </div>
 
       <div class="card stat-card">
         <h4>Available Balance</h4>
@@ -107,5 +114,6 @@ function logout() {
 
 </body>
 </html>
+
 
 
